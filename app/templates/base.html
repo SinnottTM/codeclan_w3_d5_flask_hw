@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>{{title}} Rock Paper Scissors </title>
+</head>
+
+<body>
+    <div id="page-container">
+        <div id="content-wrap">
+            <header>
+                <h1> Rock Paper Scissors </h1>
+            </header>
+            <section class="base-layout">
+
+                {% block content %}
+
+                {% endblock %}
+                
+            </section>
+        </div>
+        <footer id="footer">
+            <h4 class="footer">Made by Tim Sinnott</h4>
+        </footer>
+    </div>
+</body>
+
+</html>

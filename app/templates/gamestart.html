@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title> Rock Paper Scissors: Now Fight! </title>
+{% endblock %}
+
+{% block content %}
+<h2>Choose your destiny</h2>
+<h2>Ahem... Buttons do not work, please enter your selection as rpsmain/human/computer</h2>
+
+<!-- Original plain button logic
+<form action="/results" method="POST">
+  
+  <label>Prepare for war:</label>
+  <select name="choice">
+    <option value="rock">Rock</option>
+    <option value="paper">Paper</option>
+    <option value="scissors">Scissors</option>
+  </select>
+  <button>Now fight!</button> -->
+
+ <div class="imagesandbuttons">
+    <div class="container">
+     <img src="https://www.sportbible.com/cdn-cgi/image/width=720,quality=70,format=jpeg,fit=pad,dpr=1/https%3A%2F%2Fs3-images.sportbible.com%2Fs3%2Fcontent%2Fa87d98d35f68c2fc94b0604a44d2e0dc.png" 
+     alt="Rock">
+     <a href=/rock>
+     <button class="btn">Rock</button>
+    </div>
+  <p>
+  </p>
+    <div class="container">
+     <img src="https://starecat.com/content/wp-content/uploads/on-my-way-back-from-the-shops-toilet-paper-schwarzenegger-commando.jpg"
+     alt="Paper">
+     <a href=/paper></a>
+     <button class="btn">Paper</button>
+    </div>
+  <p>
+  </p>
+    <div class="container">
+     <img src="https://ilostmy.files.wordpress.com/2010/06/633755825269363145-scissors.jpg"
+     alt="Scissors">
+     <a href=/scissors></a>
+     <button class="btn">Scissors</button>
+    </div>
+  </div>
+<!-- </form> -->
+{% endblock %}

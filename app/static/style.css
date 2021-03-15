@@ -1,0 +1,76 @@
+/* Setting header and footer appropriately */
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 5rem; 
+}
+
+#footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;  
+}
+
+/* Setting up basic page layout */
+html {
+  font-family: cursive;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+header {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  /* background-image: url(https://external-preview.redd.it/HwWmJX3JD1MBEYYklyjZY38UQ5Fq2BYeU_4BOAqmFPE.jpg?auto=webp&s=b62a2f59bab7a9421165276035d309fbb942621e); */
+  background-color: #cccccc;
+}
+
+
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 50%;
+}
+
+/* Size the image appropriately */
+.container img {
+  max-width: 30%;
+  max-height: 30%;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* change button when mouse over */
+.container .btn:hover {
+  background-color: #ee0606; /* Red */
+  color: white;
+}
+
+.finalimg {
+    height: 250px;
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+}
