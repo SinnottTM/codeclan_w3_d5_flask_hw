@@ -24,59 +24,17 @@ def game(choice_1, choice_2):
         victor=victor, player_1_choice=choice_1, player_2_choice=choice_2,
     )
 
-# game logic, player 1 versus cpu. Couldn't quite get the logic to work
+# game logic, player 1 versus cpu. 
+# Randomised cpu answer however so not working as intended (line 32 logic wrong)
 @app.route('/cpu/<choice_1>')
 def game_cpu(choice_1):
     contest = Gamecpu(choice_1)
-    # this part is the part I had issues with, how to extract the cpu_choice from contest properly
-    cpu_choice = contest.play_game_cpu.cpu_choice
+    cpu_choice = contest.play_game_cpu_choice
     victor = contest.play_game_cpu(choice_1)
-
     return render_template(
         "gameendcpu.html", title="Rock Paper Scissors",
-        victor=victor, player_1_choice=choice_1, cpu_choice=cpu_choice,
+        victor=victor, player_1_choice=choice_1, cpu=cpu_choice,
     )
-
-#################################################################################
-
-# Game logic, get result using different HTML pages. Abandoned as it didn't work
-# Also added a lot of extra HTML pages but would have been useful for unique splash pages etc.
-# Wasn't sure how to check for rock/paper/scissors (some logic here based on older build)
-
-# app.route('/<choice_1>/<choice_2>')
-# def run_game(choice_1, choice_2):
-#     player_1 = Player("Player 1", choice_1)
-#     player_2 = Player("Player 2", choice_2)
-#     game = Game(player_1, player_2)
-#     result = game.play_game(choice_1, choice_2)
-    
-#     # Draw condition
-#     if result == "Draw":
-#         return render_template("gameenddraw.html",title="The Results")
-
-#         # Player 1 via rock
-#     elif result == "Player 1":
-#         return render_template("gameendp1rock.html", title="The Results")
-
-#         # Player 2 via paper
-#     elif result == "Player 2":
-#         return render_template("gameendp2paper.html",title="The Results")
-
-#         # Player 2 via rock
-#     elif result == "Player 2":
-#         return render_template("gameendp2rock.html",title="The Results")
-
-#         # Player 1 via scissors
-#     elif result == "Player 1":
-#         return render_template("gameendp1scissors.html",title="The Results")
-
-#         # Player 2 via scissors
-#     elif result == "Player 2":
-#         return render_template("gameendp2scissors.html",title="The Results")
-
-#         # Player 1 via paper
-#     elif result == "Player 1":
-#         return render_template("gameendp1paper.html",title="The Results")
 
 #################################################################################
 
@@ -109,3 +67,44 @@ def game_cpu(choice_1):
 #     return redirect('/')
 
 #################################################################################
+
+# PRIOR EXPERIMENT SECTION
+
+# Game logic, get result using different HTML pages. Abandoned as it didn't work
+# Also added a lot of extra HTML pages but would have been useful for unique splash pages etc.
+# Wasn't sure how to check for rock/paper/scissors (some logic here based on older build)
+
+# app.route('/<choice_1>/<choice_2>')
+# def run_game(choice_1, choice_2):
+#     player_1 = Player("Player 1", choice_1)
+#     player_2 = Player("Player 2", choice_2)
+#     game = Game(player_1, player_2)
+#     result = game.play_game(choice_1, choice_2)
+
+#     # Draw condition
+#     if result == "Draw":
+#         return render_template("gameenddraw.html",title="The Results")
+
+#         # Player 1 via rock
+#     elif result == "Player 1":
+#         return render_template("gameendp1rock.html", title="The Results")
+
+#         # Player 2 via paper
+#     elif result == "Player 2":
+#         return render_template("gameendp2paper.html",title="The Results")
+
+#         # Player 2 via rock
+#     elif result == "Player 2":
+#         return render_template("gameendp2rock.html",title="The Results")
+
+#         # Player 1 via scissors
+#     elif result == "Player 1":
+#         return render_template("gameendp1scissors.html",title="The Results")
+
+#         # Player 2 via scissors
+#     elif result == "Player 2":
+#         return render_template("gameendp2scissors.html",title="The Results")
+
+#         # Player 1 via paper
+#     elif result == "Player 1":
+#         return render_template("gameendp1paper.html",title="The Results")

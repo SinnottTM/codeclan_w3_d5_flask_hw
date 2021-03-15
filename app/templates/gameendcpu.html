@@ -11,17 +11,13 @@
     <h2>Now that the violence has ended</h2>
     {% if victor == 'Draw' %}
         <p>Player 1 selected {{ player_1_choice }}</p>
-        <p>The computer selected {{ cpu_choice }}</p>
-        <p>The struggle between man and machines rages on</p>
-    {% else %} 
+        <p>The computer selected {{ cpu }}</p>
+        <p>No one wins today, so sad</p>
+    {% else %}
         <p>Player 1 selected {{ player_1_choice }}</p>
-        <p>The computer selected {{ cpu_choice }}</p>
+        <p>The computer selected {{ cpu }}</p>
         <p>{{victor}} has decimated the enemy</p>
-        {% if victor == 'Cpu' %}
-        <p>All hail the machines</p>
-        {% else %}
-        <p>Humanity wins. For now</p>
     {% endif %}
     </div>
-</body>
+ </body>
 {% endblock %}
