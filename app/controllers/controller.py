@@ -43,16 +43,13 @@ def game(choice_1, choice_2):
 #     elif result == "P1R":
 #         return render_template("gameendp1rock.html", title="The Results")
 
-
 #         # Player 2 via paper
 #     elif result == "P2P":
 #         return render_template("gameendp2paper.html",title="The Results")
 
-
 #         # Player 2 via rock
 #     elif result == "P2R":
 #         return render_template("gameendp2rock.html",title="The Results")
-
 
 #         # Player 1 via scissors
 #     elif result == "P1S":
@@ -67,7 +64,9 @@ def game(choice_1, choice_2):
 #         return render_template("gameendp1paper.html",title="The Results")
 
 #################################################################################
+
 # Logic to add/remove player choices (maybe for previous scores etc?) Might need a new HTML page
+
 # # logic to add new event, POST
 # @app.route('/add', methods=['POST'])
 # def create():
@@ -93,4 +92,5 @@ def game(choice_1, choice_2):
 #             break
 #         remove_player(player_to_delete)
 #     return redirect('/')
+
 #################################################################################
