@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title> Rock Paper Scissors: Results </title>
+{% endblock %}
+
+{% block content %}
+
+ <body>
+    <div class="text">
+    <h2>Now that the violence has ended</h2>
+
+    {% if victor == 'Draw' %}
+        <p>Player 1 selected {{ player_1_choice }}</p>
+        <p>Player 2 selected {{ player_2_choice }}</p>
+        <p>No one wins today, so sad</p>
+
+    {% else %} 
+    
+        <p>Player 1 selected {{ player_1_choice }}</p>
+        <p>Player 2 selected {{ player_2_choice }}</p>
+        <p>{{victor}} is victorious this day</p>
+    {% endif %}
+    </div>
+</body>
+
+
+{% endblock %}
