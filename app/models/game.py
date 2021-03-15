@@ -1,8 +1,10 @@
+# Game class for two players, takes two parameters for each player
 class Game():
     def __init__(self, player_1, player_2):
         self.player_1 = player_1
         self.player_2 = player_2
 
+    # function to allow for game logic between two players
     def play_game(self, player_1, player_2):
         player_1_choice = player_1.lower()
         player_2_choice = player_2.lower()

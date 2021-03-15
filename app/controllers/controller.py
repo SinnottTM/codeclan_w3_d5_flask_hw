@@ -3,6 +3,7 @@ from app import app
 from flask import render_template, request, redirect
 from app.models.player import Player
 from app.models.game import Game
+from app.models.gamecpu import Gamecpu
 
 # Import for potential high scores list, unused
 # from app.models.players_list_high_score import players, add_new_player, remove_player
@@ -21,6 +22,19 @@ def game(choice_1, choice_2):
     return render_template(
         "gameend.html", title="Rock Paper Scissors",
         victor=victor, player_1_choice=choice_1, player_2_choice=choice_2,
+    )
+
+# game logic, player 1 versus cpu. Couldn't quite get the logic to work
+@app.route('/cpu/<choice_1>')
+def game_cpu(choice_1):
+    contest = Gamecpu(choice_1)
+    # this part is the part I had issues with, how to extract the cpu_choice from contest properly
+    cpu_choice = contest.play_game_cpu.cpu_choice
+    victor = contest.play_game_cpu(choice_1)
+
+    return render_template(
+        "gameendcpu.html", title="Rock Paper Scissors",
+        victor=victor, player_1_choice=choice_1, cpu_choice=cpu_choice,
     )
 
 #################################################################################
